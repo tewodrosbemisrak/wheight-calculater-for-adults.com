@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Health Checker</title>
+</head>
+<body>
+  <h2>Weight, Height, and Age Checker</h2>
+<script>
+    function checkHealth(){
+         $a = document.getElementById("weight").value;  
+      $b = document.getElementById("height").value;  
+      $c = document.getElementById("age").value;    
+      $b = $b / 100;
+      $bmi = $a / ($b * $b);
+      if ($c < 18) {
+
+      } else {
+        if ($bmi < 18.5) {
+          alert("You're Thin (Underweight)");
+          alert("you should eat a balanced diet with more calories to make you fat.");
+
+        } else if ($bmi >= 18.5 && $bmi < 25) {
+          alert("You're Normal");
+          alert("you're in a healthy weight range. Keep up the good work!");
+        } else if ($bmi >= 25 && $bmi < 30) {
+          alert("You're Overweight");
+          alert("You should consider a balanced diet and regular exercise.");
+        } else {
+          alert("You're Obese");
+          alert("You should consult a doctor for advice on weight management.");
+        }
+      }
+
+      document.getElementById("result").value;
+    }
+</script>
+  Enter your weight (kg): 
+  <input type="number" id="weight"><br><br>
+
+  Enter your height (cm): 
+  <input type="number" id="height"><br><br>
+
+  <label>Enter your age: </label>
+  <input type="number" id="age"><br><br>
+
+  <button onclick="checkHealth()">Check for adults</button>
+
+  <p id="result"></p>
